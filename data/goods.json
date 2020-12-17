@@ -1,0 +1,37 @@
+[
+  {
+    "goodId": "drasdff2w4523fasdf353535",
+    "name": "Apple iPhone 12 Pro Max (A2412) 128GB 海蓝色 支持移动联通电信5G 双卡双待手机",
+    "price": 9299,
+    "currency": "RMB",
+    "img":["iPhone12sdfasfwrw.jpg","iPhone122345sd24323sdfsd.jpg"]
+  }, 
+  {
+    "goodId": "sfd35dby456fgjhr7",
+    "name": "Apple MacBook Air 13.3 新款八核M1芯片(7核图形处理器) 8G 256G SSD 深空灰 笔记本电脑 MGN63CH/A",
+    "price": 7999,
+    "currency": "RMB",
+    "img":["SADFASDF2W3RWF.jpg","FGWDTERTDFG345345.jpg"]
+  },
+   {
+    "goodId": "345dvdgfe6bdfghdfg",
+    "name": "Apple MacBook Pro 13.3 新款八核M1芯片 8G 256G SSD 深空灰 笔记本电脑 轻薄本 MYD82CH/A",
+    "price": 9999,
+    "currency": "RMB",
+    "img":["asdfqwerwefsdafas.jpg","asdfwerbcvryr67.jpg"]
+  },
+  {
+    "goodId": "2358679780dfgdft235",
+    "name": "Apple 2020款 MacBook Pro 13.3【带触控栏】八代i5 8G 256G 1.4GHz 深空灰 笔记本电脑 轻薄本 MXK32CH/A",
+    "price": 9399,
+    "currency": "RMB",
+    "img":["asdfqwebdfcbd.jpg","fgsdfbcnvbm7575.jpg"]
+  },
+  {
+    "goodId": "4564vbncvhn5er645e",
+    "name": "Apple 2019款 MacBook Pro 16 九代i7 16G 512G 深空灰 RP5300M显卡 笔记本电脑 轻薄本 MVVJ2CH/A ",
+    "price": 17999,
+    "currency": "RMB",
+    "img":["fasdfsdf345334.jpg","asdfasdfsdafasdfsadf456456.jpg"]
+  }
+]
