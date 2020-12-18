@@ -8,6 +8,7 @@ yarn-error.log*
 release_server/src
 .history
 # Editor directories and files
+build
 .idea
 *.suo
 *.ntvs*
