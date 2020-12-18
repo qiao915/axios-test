@@ -13,7 +13,7 @@ export const apiGetGoodDetail: RequestHandler = (req, res) => {
 
   if (selectedGood) {
     const imgURLs = selectedGood.img.map((item: string) => {
-      return  item.indexOf("http") == -1 ?  `http://10.220.202.80:5000/static/${item}` : item;
+      return  item.indexOf("/static") == -1 ?  `/static/${item}` : item;
     })
 
     res.json(new ApiSuccess("获取成功！", 200, new GoodDetail(selectedGood, imgURLs)));

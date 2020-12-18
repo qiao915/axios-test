@@ -13,9 +13,9 @@ exports.upload = (req, res, next) => {
         else {
             let filename = '';
             if (req.app.get("env") == 'development')
-                filename = `http://10.220.202.80:5000/static/${req.file.filename}`;
+                filename = `/static/${req.file.filename}`;
             else
-                filename = `http://10.220.202.80:5000/static/${req.file.filename}`;
+                filename = `/static/${req.file.filename}`;
             res.json(new msg_1.ApiSuccess("上传成功！", 200, {
                 filePath: filename,
                 filename: req.file.filename

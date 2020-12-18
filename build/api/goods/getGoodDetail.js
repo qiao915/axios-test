@@ -9,7 +9,7 @@ exports.apiGetGoodDetail = (req, res) => {
     const selectedGood = data_1.DataStore.goods.find((item) => item.goodId == req.params.id);
     if (selectedGood) {
         const imgURLs = selectedGood.img.map((item) => {
-            return item.indexOf("http") == -1 ? `http://10.220.202.80:5000/static/${item}` : item;
+            return item.indexOf("/static") == -1 ? `/static/${item}` : item;
         });
         res.json(new msg_1.ApiSuccess("获取成功！", 200, new goodDetail_1.GoodDetail(selectedGood, imgURLs)));
     }

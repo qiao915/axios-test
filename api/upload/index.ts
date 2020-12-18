@@ -17,8 +17,8 @@ export const upload: RequestHandler = (req, res, next) => {
       res.json(new ApiError("上传失败", 400))
     } else {
       let filename = ''
-      if (req.app.get("env") == 'development') filename = `http://10.220.202.80:5000/static/${req.file.filename}`;
-      else filename = `http://10.220.202.80:5000/static/${req.file.filename}`;
+      if (req.app.get("env") == 'development') filename = `/static/${req.file.filename}`;
+      else filename = `/static/${req.file.filename}`;
 
       res.json(new ApiSuccess("上传成功！", 200, {
           filePath: filename,

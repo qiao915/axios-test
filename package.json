@@ -8,7 +8,7 @@
     "start": "nodemon -e ts -w ./ -x npm run start-server"
   },
   "keywords": [],
-  "author": "",
+  "author": "qiao",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

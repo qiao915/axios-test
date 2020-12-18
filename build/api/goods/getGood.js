@@ -8,7 +8,7 @@ const msg_1 = require("../../model/shared/msg");
 exports.apiGetGood = (req, res) => {
     let arr = data_1.DataStore.goods.map((item) => {
         let imgArr = item.img.map((value) => {
-            return value.indexOf("http") == -1 ? `http://10.220.202.80:5000/static/${value}` : value;
+            return value.indexOf("/static") == -1 ? `/static/${value}` : value;
         });
         return new goodSummary_1.GoodSummary(Object.assign(item, { img: imgArr }));
     });

@@ -9,7 +9,6 @@ release_server/src
 .history
 # Editor directories and files
 .idea
-build
 *.suo
 *.ntvs*
 *.njsproj

@@ -5,7 +5,6 @@ import { apiDeleteGood } from "./deleteGood";
 import { apiGetGoodDetail } from "./getGoodDetail";
 import { apiGetGood } from "./getGood";
 import { apiUpdateGood } from "./updateGood";
-import { apiUploadImage } from "./uploadImage";
 
 export let apiGoodsRouter = Router()
 
@@ -23,14 +22,11 @@ apiGoodsRouter.get('/:id/detail', apiGetGoodDetail);
 //  @desc           创建信息 
 apiGoodsRouter.post('/', apiCreateData);
 
-//  $router         DELETE /api/goods/:id
+//  $router         DELETE /api/goods/:id/delete
 //  @desc           删除对应id信息 
 apiGoodsRouter.delete('/:id/delete', apiDeleteGood);
 
-//  $router         PUT /api/goods/:id
+//  $router         PUT /api/goods/:id/edit
 //  @desc           更新对应id信息 
-apiGoodsRouter.put('/:id/edi', apiUpdateGood);
+apiGoodsRouter.put('/:id/edit', apiUpdateGood);
 
-//  $router         POST /api/goods/:id/img
-//  @desc          上传对应id信息的图片 
-apiGoodsRouter.post("/:id/img", apiUploadImage)

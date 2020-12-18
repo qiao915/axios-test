@@ -11,7 +11,7 @@ import { ApiSuccess } from '../../model/shared/msg';
 export const apiGetGood: RequestHandler = (req, res) => {
   let arr = DataStore.goods.map((item: any) => {
     let imgArr = item.img.map((value: string): string => {
-      return value.indexOf("http") == -1 ?  `http://10.220.202.80:5000/static/${value}` : value;
+      return value.indexOf("/static") == -1 ?  `/static/${value}` : value;
     });
     return new GoodSummary(Object.assign(item, {img: imgArr}) );
   })
