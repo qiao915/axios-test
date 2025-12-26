@@ -1,19 +1,28 @@
 
 import { ApiError, ApiSuccess } from "../../model/shared/msg";
 import { RequestHandler } from "express";
+import { DataStore } from '../../data/data';
+import { User } from '../../interface/user';
 import { v4 as uuidv4 } from 'uuid';
 
-
 export const login: RequestHandler = (req, res, next) => {
-  const requireFilds = ["username","password"]; //username password 必传
-  const givenFields = Object.getOwnPropertyNames(req.body)
-  
-  console.log(req.body);
+  try {
+    const username = req.body.username;
+    const password = req.body.password;
 
-  if (!requireFilds.every(field => givenFields.includes(field))) return res.json(new ApiError("缺少参数",400))
-  
-  if (req.body.username == "admin" && req.body.password == "YTEyMzQ1Ng==")
-    res.json(new ApiSuccess("登录成功！", 200, { "token": uuidv4() }))
-  else
-    res.json(new ApiError("账号或者密码错误！", 400))
+    if (!username || !password) {
+      return res.json(new ApiError("用户名和密码不能为空", 400));
+    }
+
+    const users = DataStore.users as unknown as User[];
+    const user = users.find(u => u.username === username && u.password === password);
+    
+    if (!user) {
+      return res.json(new ApiError("用户名或密码错误", 401));
+    }
+
+    res.json(new ApiSuccess("登录成功！", 200, { "token": uuidv4(), "role": user.role || "user" }));
+  } catch (error) {
+    res.json(new ApiError("登录失败", 500, error));
+  }
 };

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "手机",
+    "price": 5999,
+    "category": "电子产品",
+    "stock": 100
+  },
+  {
+    "id": 2,
+    "name": "笔记本电脑",
+    "price": 9999,
+    "category": "电子产品",
+    "stock": 50
+  },
+  {
+    "id": 3,
+    "name": "耳机",
+    "price": 1299,
+    "category": "音频设备",
+    "stock": 200
+  },
+  {
+    "id": 4,
+    "name": "鼠标",
+    "price": 199,
+    "category": "电脑配件",
+    "stock": 300
+  }
+]
